@@ -1,0 +1,80 @@
+﻿@model AzureVMSchedule.DAL.Models.VMSchedule
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VMSchedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Subscription.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subscription.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VirtualMachineName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VirtualMachineName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeploymentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeploymentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffHoursBegin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffHoursBegin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffHoursEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffHoursEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleActiveDays)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleActiveDays)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

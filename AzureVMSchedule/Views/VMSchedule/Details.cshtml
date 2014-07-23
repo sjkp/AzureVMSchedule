@@ -1,0 +1,74 @@
+﻿@model AzureVMSchedule.DAL.Models.VMSchedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VMSchedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Subscription.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subscription.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VirtualMachineName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VirtualMachineName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeploymentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeploymentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffHoursBegin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffHoursBegin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffHoursEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffHoursEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleActiveDays)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleActiveDays)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VMSchedulesID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

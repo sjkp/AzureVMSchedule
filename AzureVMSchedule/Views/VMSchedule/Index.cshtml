@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AzureVMSchedule.DAL.Models.VMSchedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Subscription.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VirtualMachineName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeploymentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OffHoursBegin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OffHoursEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduleActiveDays)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subscription.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VirtualMachineName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeploymentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OffHoursBegin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OffHoursEnd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduleActiveDays)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VMSchedulesID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VMSchedulesID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VMSchedulesID })
+        </td>
+    </tr>
+}
+
+</table>
